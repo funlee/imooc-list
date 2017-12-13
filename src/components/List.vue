@@ -20,7 +20,7 @@
     </div>
     <Row>
       <Col :xs="24" :sm="24" :md="24" :lg="24">
-      <Page :total="totalCount * 6" show-elevator v-on:on-change="changePage" page-size="6"></Page>
+      <Page :total="totalCount * 6" show-elevator v-on:on-change="changePage" page-size="6" :current="curPage"></Page>
       </Col>
     </Row>
   </div>
@@ -38,7 +38,17 @@
       }
     },
     mounted() {
-      this.getData()
+      if(!this.$route.query.curPage) { // url未指定页码数
+        this.$router.push({
+          path:'list',
+          query:{
+            curPage:1
+          }
+        })
+      } else { // url手动输入
+        this.curPage = this.$route.query.curPage
+        this.getData()
+      }
     },
     methods: {
       getData() {
@@ -66,7 +76,17 @@
           })
       },
       changePage(curPage) {
-        this.curPage = curPage
+        this.$router.push({
+          path:'list',
+          query:{
+            curPage:curPage
+          }
+        })
+      }
+    },
+    watch:{
+      $route() {
+        this.curPage = this.$route.query.curPage //|| 1
         this.getData()
       }
     }

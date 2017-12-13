@@ -8,6 +8,10 @@ export default new Router({
   routes: [{
     path: '/',
     name: 'List',
+    // redirect: '/list?curPage=1',
+    component: List
+  }, {
+    path: '/list',
     component: List
   }]
 })
