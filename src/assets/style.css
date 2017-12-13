@@ -1,0 +1,132 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.top {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
+  background: #fafafa;
+}
+
+.logo {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+}
+
+.logo-img {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+  background: url(./logo.png) no-repeat center;
+  background-size: auto 150%;
+  position: relative;
+  top: 0;
+  left: 0;
+  vertical-align: middle;
+}
+
+.course {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.course-item {
+  margin-top: 20px;
+  padding-top: 8px;
+}
+
+.course-item:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 20px black;
+}
+
+.course-img {
+  display: block;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.course-item {
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.titlediv {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  font-size: 22px;
+  text-align: left;
+  padding: 0 2%;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  padding: 0 2%;
+}
+
+.timetitle {
+  font-size: 14px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  padding: 0 2%;
+  color: #D64BD3;
+}
+
+.long {
+  color: #D6984D;
+}
+
+.ivu-page {
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.demo-spin-icon-load {
+  animation: ani-demo-spin 1s linear infinite;
+}
+
+@keyframes ani-demo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.demo-spin-col {
+  height: 100px;
+  position: relative;
+  border: 1px solid #eee;
+}
+

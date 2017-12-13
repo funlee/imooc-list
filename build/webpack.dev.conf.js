@@ -5,7 +5,6 @@ const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
@@ -51,9 +50,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new OpenBrowserPlugin({
-      url: 'http://localhost:8080'
-    })
   ]
 })
 
