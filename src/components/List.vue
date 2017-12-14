@@ -20,7 +20,7 @@
     </div>
     <Row>
       <Col :xs="24" :sm="24" :md="24" :lg="24">
-      <Page :total="totalCount * 6" show-elevator v-on:on-change="changePage" page-size="6" :current="curPage"></Page>
+      <Page :total="totalCount * 6" show-elevator @on-change="changePage" :page-size="6" :current="curPage"></Page>
       </Col>
     </Row>
   </div>
@@ -55,25 +55,24 @@
         this.$Loading.start()
         const self = this
         const URL = 'http://imoocnote.calfnote.com/inter/getClasses.php'
-        axios.get(URL, {
-            params: {
-              curPage: self.curPage
-            }
-          })
+        let param = {
+          params:{
+            curPage:this.curPage
+          }
+        }
+        axios.get(URL, param)
           .then(response => {
-            self.lists = []
-            self.totalCount = response.data.totalCount
-            var dataset = response.data.data
-            dataset.map(item => {
-              item.isLongTime = item.timespan.indexOf('小时') != -1 ? true : false
-              self.lists.push(item)
+            let data = response.data
+            this.totalCount = data.totalCount
+            this.lists = data.data.map(item =>{
+              return {
+                ...item,
+                isLongTime:item.timespan.indexOf('小时') != -1 ? true : false
+              }
             })
-            self.$Loading.finish()
+            this.$Loading.finish()
           })
-          .catch(error => {
-            console.log(error)
-            self.$Loading.error()
-          })
+          .catch(error => this.$Loading.error())
       },
       changePage(curPage) {
         this.$router.push({
@@ -91,11 +90,4 @@
       }
     }
   }
-
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-</style>
