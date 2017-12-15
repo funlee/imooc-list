@@ -4,7 +4,7 @@ imooc-list
 
 主要功能
 -------
-* 利用第三方API，获取慕课网课程列表，前台用Vue实现展示
+* 利用第三方`API`，获取慕课网课程列表，前台用`Vue`实现展示
 * 支持分页加载，支持路由的前进后退
 * 支持直接在浏览器地址栏修改传参加载数据
 * 页面布局支持响应式
@@ -19,7 +19,7 @@ imooc-list
 安装
 ----
 ```bash
-git clone git@github.com:funlee/imooc-list.git
+git clone https://github.com/funlee/imooc-list.git
 cd imooc-list
 npm install
 npm run dev
@@ -31,8 +31,12 @@ npm run dev
 踩坑记录
 -------
 1.`vue-cli`打包过后，上传`github page`并不能预览，会出现`无法加载静态资源`，解决办法：
-* 更改根目录`config`下的`index.js`文件，将将 assetsPublicPath: '/',　改为　assetsPublicPath: './'
+* 更改根目录`config`下的`index.js`文件，将将 `assetsPublicPath: '/'`,　改为　`assetsPublicPath: './'`
+
+![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug1.jpg "解决无法加载静态资源")
 
 2.页面中用`background`加载的图片可以正常显示，但是所有的字体图标都不能正常显示，解决方法：
-* 更改根目录下`build`中的`utils.js`文件，在控制`build`样式文件代码中添加　publicPath: '../../'
+* 更改根目录下`build`中的`utils.js`文件，在控制`build`样式文件代码中添加　`publicPath: '../../'`
+
+![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug1.jpg "解决无法加载字体图标")
 
