@@ -40,3 +40,14 @@ npm run dev
 
 ![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug1.jpg "解决无法加载字体图标")
 
+3.在`Vue2.0`中使用`iview`时，控制给了如下警告，这是由于`Vue`升级后，对组件命名有了要求后导致的,有两种解决办法：
+
+![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug3.png "解决使用iview的警告")
+
+* 在`main.js`里面添加代码
+
+![](https://raw.github.com/funlee/imooc-list/master/src/assets/fixbug3.jpg "解决使用iview的警告")
+
+* 第二种解决办法是使用[iview-loader](https://www.npmjs.com/package/iview-loader)
+
+
