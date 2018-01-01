@@ -38,7 +38,7 @@ npm run dev
 2.页面中用 `background` 加载的图片可以正常显示，但是所有的字体图标都不能正常显示，解决方法：
 * 更改根目录下 `build` 中的 `utils.js` 文件，在控制 `build` 样式文件代码中添加　`publicPath: '../../'`
 
-![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug1.jpg "解决无法加载字体图标")
+![](https://raw.github.com/funlee/imooc-list/master/src/assets/bug2.jpg "解决无法加载字体图标")
 
 3.在 `Vue2.0` 中使用 `iView` 时，控制给了如下警告，这是由于 `Vue` 升级后，对组件命名有了要求后导致的,有两种解决办法：
 
