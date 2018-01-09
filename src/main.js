@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
-
+import playTitle from 'play-title'
+playTitle('hey,look at me')
 Vue.config.warnHandler = function(msg,vm,trace) {
   return false
 }
