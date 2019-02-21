@@ -54,7 +54,8 @@
       getData() {
         this.$Loading.start()
         const self = this
-        const URL = 'http://imoocnote.calfnote.com/inter/getClasses.php'
+        // const URL = 'http://imoocnote.calfnote.com/inter/getClasses.php';
+        const URL = 'http://imoocnote.calfnote.com/inter/getClasses.php?curPage=1';
         let param = {
           params:{
             curPage:this.curPage
