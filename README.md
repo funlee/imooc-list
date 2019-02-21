@@ -26,8 +26,6 @@ npm run dev
 ```
 然后在浏览器里输入：http:localhost:8080 即可访问
 
-在线访问：http://show.funlee.cn/imooc-list
-
 踩坑记录
 -------
 1.`vue-cli` 打包过后，上传 `github page` 并不能预览，会出现`无法加载静态资源`，解决办法：
